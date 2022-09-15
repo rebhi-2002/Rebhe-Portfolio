@@ -34,6 +34,44 @@ ul {
   margin: 0;
   padding: 0;
 }
+.spikes {
+  position: relative;
+}
+.spikes::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 30px;
+  z-index: 1;
+  background-image: linear-gradient(135deg, white 25%, transparent 25%),
+    linear-gradient(225deg, white 25%, transparent 25%);
+  background-size: 30px 30px;
+}
+.banner,
+.services,
+.testimonials {
+  background: #fff;
+}
+.about,
+.project,
+.contact {
+  background: #ececec;
+}
+.dark .spikes::after {
+  background-image: linear-gradient(135deg, #333 25%, transparent 25%),
+    linear-gradient(225deg, #333 25%, transparent 25%);
+}
+.dark .banner,
+.dark .services,
+.dark .testimonials {
+  background: #333;
+}
+.dark .about,
+.dark .project,
+.dark .contact {
+  background: rgba(68 68 68 / 50%);
+}
 /* End Global Rules */
 .container {
   position: relative;
@@ -234,7 +272,7 @@ p {
   width: 100%;
   padding: 0 40px;
   padding-top: 80px;
-  background: var(--white);
+  /* background: var(--white); */
   color: var(--black);
   display: inline-block;
 }
@@ -556,6 +594,7 @@ p {
   text-transform: uppercase;
   max-width: 150px;
   border: none;
+  margin-bottom: 100px;
 }
 .dark .contact .contactForm .row2 input[type="submit"]:hover {
   background: #2196f3;
@@ -565,7 +604,8 @@ p {
 .copyright {
   position: relative;
   bottom: 0;
-  padding: 10px 40px;
+  /* padding: 10px 40px; */
+  padding: 20px 40px;
   text-align: center;
 }
 .dark .copyright i {
@@ -670,10 +710,9 @@ p {
   .contact .contactForm .row {
     grid-template-columns: repeat(1, 1fr);
   }
-  .contact {
-    margin-bottom: 100px;
-  }
+  /* .contact { margin-bottom: 100px; } */
   .copyright {
-    padding: 10px 10px;
+    /* padding: 10px 10px; */
+    padding: 15px;
   }
 }
