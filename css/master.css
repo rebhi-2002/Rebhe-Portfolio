@@ -72,6 +72,9 @@ ul {
 .dark .contact {
   background: rgba(68 68 68 / 50%);
 }
+.hidden {
+  display: none;
+}
 /* End Global Rules */
 .container {
   position: relative;
@@ -441,12 +444,39 @@ p {
 .project .content .workBx .textBx h3:hover a {
   color: #fff;
 }
+.project .show-more {
+  width: 180px;
+  padding: 10px;
+  margin: 20px auto;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  /* transition: all 0.5s ease-in-out; */
+}
+.project .show-more:hover {
+  background-color: var(--black2);
+  border-color: var(--black2);
+  color: #fff;
+}
 .dark .project .content .workBx .textBx h3 a {
   color: #fff;
   text-decoration: none;
 }
 .dark .project .content .workBx .textBx h3:hover a {
   color: #2196f3;
+}
+.dark .project .show-more {
+  background: var(--black2);
+  color: #fff;
+  border: none;
+}
+.dark .project .show-more:hover {
+  background-color: #2196f3;
+  border-color: #2196f3;
 }
 /* End Project */
 /* Strat Testimonials */

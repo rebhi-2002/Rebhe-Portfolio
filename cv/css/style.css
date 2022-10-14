@@ -57,11 +57,13 @@ body {
 }
 .profileText .imgBx img {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 5px;
+  left: 10px;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: scale(1.5);
+  background: linear-gradient(#03a9f3, #003147);
 }
 .profileText h2 {
   color: #fff;
@@ -101,9 +103,13 @@ body {
   font-size: 18px;
   color: #03a9f4;
 }
+.contactInfo ul li span a,
 .contactInfo ul li span {
   color: #fff;
   font-weight: 300;
+}
+.contactInfo ul li span a {
+  text-decoration: none;
 }
 .contactInfo.education li {
   margin-bottom: 15px;
@@ -152,9 +158,7 @@ body {
   letter-spacing: 1px;
   margin-bottom: 10px;
 }
-p {
-  color: #333;
-}
+/* p { color: #333; } */
 .about .box {
   display: flex;
   flex-direction: row;
@@ -173,6 +177,17 @@ p {
   color: #2a7da2;
   font-size: 16px;
 }
+.about .box .text ul li {
+  color: #333;
+  /* list-style: none; */
+}
+/* .about .box .text ul li::before {
+  font-family: "FontAwesome";
+  content: "\f00c";
+  color: #03a9f4;
+  position: absolute;
+  transform: translateX(-130%);
+} */
 .skills .box {
   position: relative;
   width: 100%;
@@ -217,7 +232,8 @@ p {
   color: #03a9f4;
   font-size: 18px;
   width: 20px;
-  margin-right: 5px;
+  /* margin-right: 5px; */
+  margin-right: 10px;
 }
 
 @media (max-width: 1000px) {

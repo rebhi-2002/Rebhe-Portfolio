@@ -29,6 +29,23 @@ function toggleMenu() {
 
 document.querySelector(".link").addEventListener("click", toggleMenu);
 
+// Show Hidden Items From Work
+
+let showMore = document.querySelector(".show-more");
+let hidden = document.querySelector(".hidden");
+
+showMore.addEventListener("click", function () {
+  if (showMore.innerHTML === "Less View") {
+    showMore.innerHTML = "Show More";
+    /* hidden.style.display = "none"; */
+    $(".hidden").fadeOut();
+  } else {
+    showMore.innerHTML = "Less View";
+    /* hidden.style.display = "block"; */
+    $(".hidden").fadeIn(1000);
+  }
+});
+
 // current year in copyright div
 
 document.querySelector(".year").innerHTML = new Date().getFullYear();
