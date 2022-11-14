@@ -259,12 +259,37 @@ p {
   color: var(--black);
   font-size: 1.2em;
 }
+.socialMedia li a i img.mostaql {
+  width: 22px;
+  display: flex;
+  filter: invert(1);
+}
+.socialMedia li a i img.khamsat {
+  width: 14px;
+  display: flex;
+  filter: invert(1);
+}
+.socialMedia li a.freelancer {
+  overflow: hidden;
+}
+.socialMedia li a.freelancer i svg {
+  width: 100%;
+  display: flex;
+  transform: translateY(34px) scale(0.6);
+  filter: invert(1);
+}
 .dark .socialMedia li a:hover {
   background: #2196f3;
 }
 .socialMedia li a:hover {
   background: var(--black2);
   color: #fff;
+}
+.socialMedia li a:hover i img,
+.socialMedia li a:hover i svg,
+.dark .socialMedia li a i img,
+.dark .socialMedia li a i svg {
+  filter: none;
 }
 /* End Banner */
 /* Start About */
@@ -734,6 +759,22 @@ p {
   }
 }
 @media (max-width: 767px) {
+  /*  */
+  .socialMedia {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    font-size: 22px;
+  }
+  .socialMedia li a i img.mostaql {
+    width: 26px;
+  }
+  .socialMedia li a i img.khamsat {
+    width: 18px;
+  }
+  .socialMedia li a.freelancer i svg {
+    transform: translateY(42px) scale(0.75);
+  }
+  /*  */
   .services .content,
   .project .content,
   .testimonials .content,
