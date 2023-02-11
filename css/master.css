@@ -259,6 +259,13 @@ p {
   color: var(--black);
   font-size: 1.2em;
 }
+.socialMedia li a:hover {
+  background: var(--black2);
+  color: #fff;
+}
+.dark .socialMedia li a:hover {
+  background: #2196f3;
+}
 .socialMedia li a i img.mostaql {
   width: 22px;
   display: flex;
@@ -272,24 +279,27 @@ p {
 .socialMedia li a.freelancer {
   overflow: hidden;
 }
-.socialMedia li a.freelancer i svg {
+.socialMedia li a.freelancer svg {
   width: 100%;
   display: flex;
   transform: translateY(34px) scale(0.6);
   filter: invert(1);
 }
-.dark .socialMedia li a:hover {
-  background: #2196f3;
-}
-.socialMedia li a:hover {
-  background: var(--black2);
-  color: #fff;
-}
 .socialMedia li a:hover i img,
-.socialMedia li a:hover i svg,
+.socialMedia li a:hover svg,
 .dark .socialMedia li a i img,
-.dark .socialMedia li a i svg {
+.dark .socialMedia li a svg,
+.dark .socialMedia li a.upwork svg,
+.dark .socialMedia li a.upwork:hover svg {
   filter: none;
+}
+.socialMedia li a.upwork svg {
+  width: 85%;
+  display: flex;
+  fill: var(--black);
+}
+.socialMedia li a.upwork:hover svg {
+  fill: #fff;
 }
 /* End Banner */
 /* Start About */
@@ -762,7 +772,7 @@ p {
   /*  */
   .socialMedia {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     font-size: 22px;
   }
   .socialMedia li a i img.mostaql {
@@ -771,7 +781,7 @@ p {
   .socialMedia li a i img.khamsat {
     width: 18px;
   }
-  .socialMedia li a.freelancer i svg {
+  .socialMedia li a.freelancer svg {
     transform: translateY(42px) scale(0.75);
   }
   /*  */
